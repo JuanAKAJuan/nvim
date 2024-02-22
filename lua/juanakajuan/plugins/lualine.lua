@@ -134,6 +134,7 @@ return {
 
         ins_left {
             'filename',
+            path = 1,
             cond = conditions.buffer_not_empty,
             color = { fg = colors.red, gui = 'bold' },
         }
@@ -158,6 +159,10 @@ return {
         -- }
 
         ins_right {
+            'location',
+            color = { fg = colors.red, gui = 'bold' },
+        }
+        ins_right {
             -- Lsp server name .
             function()
                 local msg = 'No Active Lsp'
@@ -180,7 +185,7 @@ return {
 
         -- Add components to right sections
         ins_right {
-            'o:encoding', -- option component same as &encoding in viml
+            'o:encoding',       -- option component same as &encoding in viml
             fmt = string.upper, -- I'm not sure why it's upper case either ;)
             cond = conditions.hide_in_width,
             color = { fg = colors.fg, },
