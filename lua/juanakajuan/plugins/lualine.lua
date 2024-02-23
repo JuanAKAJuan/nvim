@@ -134,7 +134,7 @@ return {
 
         ins_left {
             'filename',
-            path = 1,
+            path = 2,
             cond = conditions.buffer_not_empty,
             color = { fg = colors.red, gui = 'bold' },
         }
