@@ -26,6 +26,7 @@ return {
             --
             -- In this case, we create a function that lets us more easily define mappings specific
             -- for LSP related items. It sets the mode, buffer and description for us each time.
+            vim.lsp.inlay_hint.enable()
             local nmap = function(keys, func, desc)
                 if desc then
                     desc = 'LSP: ' .. desc
@@ -130,9 +131,13 @@ return {
         --  If you want to override the default filetypes that your language server will attach to you can
         --  define the property 'filetypes' to the map in question.
         local servers = {
-            clangd = {},
+            clangd = {
+                hint = { enable = true },
+            },
             -- gopls = {},
-            pyright = {},
+            pyright = {
+                hint = { enable = true },
+            },
             -- rust_analyzer = {},
             -- tsserver = {},
             -- html = { filetypes = { 'html', 'twig', 'hbs'} },
@@ -143,14 +148,13 @@ return {
                     telemetry = { enable = false },
                     -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
                     -- diagnostics = { disable = { 'missing-fields' } },
+                    hint = { enable = true },
                 },
             },
         }
 
         -- Setup neovim lua configuration
         require('neodev').setup()
-
-        require("lspconfig").dartls.setup {}
 
         -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
         local capabilities = vim.lsp.protocol.make_client_capabilities()
