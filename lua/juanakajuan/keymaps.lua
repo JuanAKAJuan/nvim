@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<C-a>", "<C-^>")
+
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
