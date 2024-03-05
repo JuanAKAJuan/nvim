@@ -99,6 +99,12 @@ return {
             end, { desc = "Format current buffer with LSP" })
         end
 
+        require('flutter-tools').setup {
+            lsp = {
+                on_attach = on_attach,
+            }
+        }
+
         -- document existing key chains
         require("which-key").register {
             ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },

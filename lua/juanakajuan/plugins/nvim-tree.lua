@@ -7,8 +7,11 @@ return {
     },
     config = function()
         require("nvim-tree").setup {
+			view = {
+				width = 30,
+			},
             renderer = {
-                root_folder_label = true,
+                root_folder_label = false,
                 highlight_git = true,
                 highlight_opened_files = "none",
 
