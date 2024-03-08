@@ -6,10 +6,12 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     config = function()
+        local api = require "nvim-tree.api"
+        vim.keymap.set("n", "?", api.tree.toggle_help)
         require("nvim-tree").setup {
-			view = {
-				width = 30,
-			},
+            view = {
+                width = 30,
+            },
             renderer = {
                 root_folder_label = false,
                 highlight_git = true,
