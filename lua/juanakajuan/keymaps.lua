@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<leader>fl", "<Cmd>FlutterReload<CR>")
+vim.keymap.set("n", "<leader>cl", "<cmd> ClangdSwitchSourceHeader<CR>")
 
-vim.keymap.set("n", "<C-a>", "<C-^>")
+-- vim.keymap.set("n", "<C-a>", "<C-^>")
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")

@@ -41,12 +41,12 @@ return {
                     context = { only = { "quickfix", "refactor", "source" } },
                 }
             end, "[C]ode [A]ction")
-
-            nmap(
-                "gd",
-                require("telescope.builtin").lsp_definitions,
-                "[G]oto [D]efinition"
-            )
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = bufnr, desc = 'LSP Definition' })
+            -- nmap(
+            --     "gd",
+            --     require("telescope.builtin").lsp_definitions,
+            --     "[G]oto [D]efinition"
+            -- )
             nmap(
                 "gr",
                 require("telescope.builtin").lsp_references,
@@ -98,12 +98,6 @@ return {
                 vim.lsp.buf.format()
             end, { desc = "Format current buffer with LSP" })
         end
-
-        require('flutter-tools').setup {
-            lsp = {
-                on_attach = on_attach,
-            }
-        }
 
         -- document existing key chains
         require("which-key").register {
@@ -166,6 +160,14 @@ return {
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities =
             require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+        require('flutter-tools').setup {
+            lsp = {
+                on_attach = on_attach,
+                capabilties = capabilities,
+            }
+        }
+
 
         -- Ensure the servers above are installed
         local mason_lspconfig = require "mason-lspconfig"
