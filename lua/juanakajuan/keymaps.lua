@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<leader>cl", "<cmd> ClangdSwitchSourceHeader<CR>")
+vim.keymap.set("n", "<leader>zm", "<cmd>ZenMode<CR>")
+vim.keymap.set("n", "<leader>cl", "<cmd>ClangdSwitchSourceHeader<CR>")
 
 -- vim.keymap.set("n", "<C-a>", "<C-^>")
 
