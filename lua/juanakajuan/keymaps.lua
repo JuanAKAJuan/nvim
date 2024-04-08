@@ -20,12 +20,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("i", "<C-b>", "<ESC>^i")
 vim.keymap.set("i", "<C-e>", "<End>")
 
--- navigate within insert mode
-vim.keymap.set("i", "<C-h>", "<Left>")
-vim.keymap.set("i", "<C-l>", "<Right>")
-vim.keymap.set("i", "<C-j>", "<Down>")
-vim.keymap.set("i", "<C-k>", "<Up>")
-
 vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
 
