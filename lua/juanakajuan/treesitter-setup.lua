@@ -17,6 +17,7 @@ vim.defer_fn(function()
             "vimdoc",
             "vim",
             "bash",
+            "java",
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
