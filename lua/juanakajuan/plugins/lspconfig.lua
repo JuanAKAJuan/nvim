@@ -167,6 +167,13 @@ return {
             }
         }
 
+        -- Setup Java
+        require("java").setup()
+        require('lspconfig').jdtls.setup({
+            -- on_attach = on_attach,
+            -- capabilties = capabilities,
+        })
+
 
         -- Ensure the servers above are installed
         local mason_lspconfig = require "mason-lspconfig"
