@@ -5,7 +5,14 @@ return {
         require("no-neck-pain").setup({
             autocmds = {
                 enableOnVimEnter = true,
-            }
+            },
+
+            buffers = {
+                setNames = true,
+                right = {
+                    enabled = false,
+                },
+            },
         })
     end
 }
