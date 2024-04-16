@@ -8,6 +8,8 @@ return {
     config = function()
         local api = require "nvim-tree.api"
         vim.keymap.set("n", "?", api.tree.toggle_help)
+        vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
+
         require("nvim-tree").setup {
             view = {
                 width = 30,

@@ -125,18 +125,6 @@ return {
         -- before setting up the servers.
         require("mason").setup()
 
-        require("java").setup()
-        -- require("lspconfig").jdtls.setup {
-        --     handlers = {
-        --         ["language/status"] = function(_, result)
-        --             -- Print or whatever.
-        --         end,
-        --         ["$/progress"] = function(_, result, ctx)
-        --             -- disable progress updates.
-        --         end,
-        --     },
-        -- }
-
         require("mason-lspconfig").setup()
 
         -- Enable the following language servers

@@ -4,8 +4,6 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>zm", "<cmd>ZenMode<CR>")
 vim.keymap.set("n", "<leader>cl", "<cmd>ClangdSwitchSourceHeader<CR>")
 
--- vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
-
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
