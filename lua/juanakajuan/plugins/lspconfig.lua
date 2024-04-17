@@ -189,9 +189,6 @@ return {
                     settings = servers[server_name],
                     filetypes = (servers[server_name] or {}).filetypes,
                     handlers = {
-                        ["language/status"] = function(_, result)
-                            -- Print or whatever.
-                        end,
                         ["$/progress"] = function(_, result, ctx)
                             -- disable progress updates.
                         end,
