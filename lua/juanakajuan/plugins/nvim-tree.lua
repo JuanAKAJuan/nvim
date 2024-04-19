@@ -14,6 +14,9 @@ return {
             view = {
                 width = 30,
             },
+            git = {
+                ignore = false,
+            },
             renderer = {
                 root_folder_label = false,
                 highlight_git = true,
