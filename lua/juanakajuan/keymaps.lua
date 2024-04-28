@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<C-a>", "<C-^>")
+
 -- Quick fix list navigation
 vim.keymap.set("n", "<A-j>", "<CMD>cnext<CR>zz")
 vim.keymap.set("n", "<A-k>", "<CMD>cprev<CR>zz")
