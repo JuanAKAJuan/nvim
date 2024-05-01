@@ -1,11 +1,16 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<C-a>", "<C-^>")
+-- vim.keymap.set("n", "<C-a>", "<C-^>")
 
 -- Quick fix list navigation
 vim.keymap.set("n", "<leader>qn", "<CMD>cnext<CR>zz")
 vim.keymap.set("n", "<leader>qp", "<CMD>cprev<CR>zz")
+
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Replace the word that I am currently on
 vim.keymap.set(
@@ -36,9 +41,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- go to  beginning and end
 vim.keymap.set("i", "<C-b>", "<ESC>^i")
 vim.keymap.set("i", "<C-e>", "<End>")
-
-vim.keymap.set("n", "<C-h>", "<CMD> TmuxNavigateLeft<CR>")
-vim.keymap.set("n", "<C-l>", "<CMD> TmuxNavigateRight<CR>")
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
