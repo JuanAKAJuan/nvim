@@ -1,3 +1,5 @@
+vim.opt.swapfile = false
+
 vim.opt.colorcolumn = "80"
 vim.opt.wrap = true
 
