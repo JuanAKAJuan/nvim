@@ -1,3 +1,5 @@
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 vim.opt.swapfile = false
 
 vim.opt.colorcolumn = "80"
