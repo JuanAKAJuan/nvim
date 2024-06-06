@@ -46,11 +46,11 @@ return {
                 vim.lsp.buf.definition,
                 { buffer = bufnr, desc = "LSP Definition" }
             )
-            -- nmap(
-            --     "gd",
-            --     require("telescope.builtin").lsp_definitions,
-            --     "[G]oto [D]efinition"
-            -- )
+            nmap(
+                "gd",
+                require("telescope.builtin").lsp_definitions,
+                "[G]oto [D]efinition"
+            )
             nmap(
                 "gr",
                 require("telescope.builtin").lsp_references,
